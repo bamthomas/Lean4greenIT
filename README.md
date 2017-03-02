@@ -1,6 +1,6 @@
 # Lean for GreenIT
 
-Slideshow for Lean IT Summit presentation.
+Slideshow for [Lean IT Summit](http://www.lean-it-summit.com/) session.
 
 See https://lean4greenit.barreverte.fr
 
