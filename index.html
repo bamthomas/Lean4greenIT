@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Lean for GreenIT</title>
+    <meta name="description" content="How we have used Lean during conception phase to reduce the ecological footprint of our website by almost 25%">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" type='text/css' media='all' href="static/css/base.css">
+    <link rel="stylesheet" type='text/css' media='all' href="static/css/colors.css">
+    <link rel="stylesheet" type='text/css' media='all' href="static/css/svg-icons.css">
+
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="classe.io">
+    <meta name="twitter:creator" content="@bam_thomas">
+    <meta name="twitter:title" content="Lean for GreenIT">
+    <meta name="twitter:description" content="How we have used Lean during conception phase to reduce the ecological footprint of our website by almost 25%">
+    <meta name="twitter:image" content="static/images/share-webslides.jpg">
+  </head>
+  <body>
+    <header role="banner">
+      <nav role="navigation">
+        <p class="logo"><a href="index.html" title="WebSlides">WebSlides</a></p>
+        <ul>
+          <li class="github">
+            <a rel="external" href="https://github.com/bamthomas/lean4greeit" title="Github">
+              <svg class="fa-github">
+                <use xlink:href="#fa-github"></use>
+              </svg>
+              <em>WebSlides</em>
+            </a>
+          </li>
+          <li class="twitter">
+            <a rel="external" href="https://twitter.com/webslides" title="Twitter">
+              <svg class="fa-twitter">
+                <use xlink:href="#fa-twitter"></use>
+              </svg>
+              <em>@WebSlides</em>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      <article id="webslides" class="horizontal">
+        <section class="bg-trans-dark aligncenter">
+         <span class="background light" style="background-image:url('static/images/lean4greenit-1.jpg')"></span>
+          <div class="wrap aligncenter">
+            <h1><strong>Lean for GreenIT</strong></h1>
+            <p class="text-intro">
+              How we have used Lean during conception phase<br>
+              to reduce the ecological footprint of our website
+            </p>
+          </div>
+        </section>
+        <section>
+          <div class="wrap size-50 aligncenter">
+            <h2><strong>A meeting</strong></h2>
+            <p class="text-intro">with</p>
+            <div class="bg-white shadow">
+              <ul class="flexblock reasons">
+                <li>
+                  <h2>Two lawyers and a developer</h2>
+                  <p>Cabinet Ricard & Ringuier cannot find a case software that fit their need, asks if we could build one...</p>
+                </li>
+                <li>
+                  <h2>Green IT and Lean</h2>
+                  <p>...with Corporate Social Responsibility</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <h1>What does the litterature say ?</h1>
+            About CSR in software development
+            <ul class="flexblock blink border">
+              <li>
+                <a href="https://abookapart.com/products/responsible-responsive-design">
+                  <div class="grid">
+                    <div class="column">
+                    <h3>Scott Jehl</h3>
+                    <img src="static/images/design_web.jpg" />
+                    </div>
+                    <div class="column">
+                    A book for developers. A great part is about responsible design, but also :
+                    <ul>
+                      <li>how to make a website durable and available for all kinds of devices</li>
+                      <li>how to optimize resources</li>
+                    </ul>
+                    </div>
+                  </div>
+                </a>
+              </li><li>
+                <a href="https://ecoconceptionweb.com/">
+                  <div class="grid">
+                    <div class="column">
+                    <h3>Frédéric Bordage</h3>
+                    <img src="static/images/115_pratiques.jpg"/>
+                    </div>
+                      <div class="column">
+                    It's 115 good practices proposed by the author to optimize a website (in french). Each one has a level of priority,
+                    high/medium/low leading to an evaluation grid based on the number of high/medium/low advices implemented.
+                      </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <div class="grid">
+              <div class="column">
+                <h1>Problem solving</h1>
+                <p>which measure is the best ?</p>
+                <p>which problem to tackle first ?</p>
+                <p>How much each measure will improve the site ?</p>
+                <p>How to measure carbon footprint improvements ?</p>
+              </div>
+              <div class="column">
+                <img src="static/images/peche_amelioration.gif" width="500" height="400"/>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <div class="grid ms">
+              <div class="column">
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;
+  &lt;meta http-equiv="content-type" content="text/html; charset=UTF-8"&gt;
+    ....
+  &lt;title&gt;Projet S&lt;/title&gt;
+  &lt;link rel="stylesheet" href="/static/css/semantic.css"/&gt;
+  &lt;link rel="stylesheet" href="/static/css/mytheme.css"/&gt;
+  &lt;script src="/static/js/jquery.min.js"/&gt;
+  &lt;script src="/static/js/jquery.form-3.51.js"/&gt;
+  &lt;script src="/static/js/underscore.min.js"/&gt;
+  &lt;script src="/static/js/backbone.min.js"/&gt;
+  &lt;script src="/static/js/semantic.min.js"/&gt;
+
+  &lt;script&gt;
+    $(document).ready(function() {
+      $('.masthead').visibility({
+        once: false,
+        onBottomPassed: function() {
+            $('.fixed.menu').transition('fade in');
+        },
+        onBottomPassedReverse: function() {
+            $('.fixed.menu').transition('fade out');
+        }
+      });
+      $('.ui.sidebar').sidebar('attach events', '.toc.item');
+    });
+  &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class="ui main container&gt;
+    {% block body %}{% endblock %}
+&lt;/div&gt;
+&lt;/body&gt;
+</pre>
+                  </div>
+                <div class="column">
+                  <h1>go and see</h1>
+                    <ul class="flexblock specs">
+                        <li>
+                            <div>
+                                <svg class="fa-css3"><use xlink:href="#fa-css3"></use></svg>
+                                2 stylesheets CSS. Each is a request
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <svg class="fa-file-code-o"><use xlink:href="#fa-file-code-o"></use></svg>
+                                5 javascript libraries. Each is a request
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                            <svg class="fa-code"><use xlink:href="#fa-code"></use></svg>
+                            Inline javascript loaded each page and not minified
+                            </div>
+                        </li>
+                    </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+
+     <footer role="contentinfo">
+      <div class="wrap">
+        <p>An <a href="https://github.com/jlantunez/webslides">open source solution</a>, by <a href="https://twitter.com/jlantunez">@jlantunez</a>.</p>
+      </div>
+    </footer>
+
+    <script src="static/js/svg-icons.js"></script>
+    <script src="static/js/webslides.js"></script>
+    <script>
+      window.ws = new WebSlides();
+    </script>
+
+    <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
+    <script defer src="static/js/svg-icons.js"></script>
+
+  </body>
+</html>
