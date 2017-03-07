@@ -148,8 +148,6 @@
             <div class="grid">
               <div class="column">
                 <h1>Problem solving</h1>
-                <p>How much each corrective action will cost ?</p>
-                <p>How much each corrective action will improve the site ?</p>
                 <p>Which problem to tackle first ?</p>
                 <p>What will be the benefit for the user ?</p>
                 <p>How to measure carbon footprint improvements ?</p>
@@ -193,7 +191,7 @@
         <section class="bg-trans-clear aligncenter">
           <div class="wrap">
             <div class="content-center">
-              <h2>Zoom 1: Polling alternatives</h2>
+              <h2>Zoom 1: <span style="color: orange">Polling</span> alternatives</h2>
               <p>HTTP protocol has not been built for server push</p>
             </div>
             <ul class="flexblock">
@@ -230,6 +228,48 @@
             </ul>
           </div>
         </section>
+
+        <section class="bg-trans-clear aligncenter">
+          <div class="wrap">
+            <div class="content-center">
+              <h2>Zoom 1: <span style="color: orange">Polling</span> alternatives</h2>
+              <p>HTTP protocol has not been built for server push</p>
+            </div>
+            <ul class="flexblock">
+              <li>
+                <h2>Long time polling</h2>
+                <p>HTTP protocol workaround for webpush. Works with all browsers. Regular request and response header overhead (~1KB).</p>
+              </li>
+              <li style="background-color: lightcoral">
+                <h2>Comet</h2>
+                <p>Rather old, based on long time polling</p>
+              </li>
+              <li>
+                <h2>Http Streaming</h2>
+                <p>Similar to long polling but the server responds with a header "Transfer Encoding: chunked"
+                  and hence we do not need to initiate a new request every time the server sends some data</p>
+              </li>
+              <li style="background-color: lightcoral">
+                <h2>Server-Sent Events</h2>
+                <p>Based on long time polling</p>
+              </li>
+              <li style="background-color: lightcoral">
+                <h2>Networking plugins</h2>
+                <p>Users need to install a software component in their browsers</p>
+              </li>
+              <li>
+                <h2>Websocket</h2>
+                <p>Full-duplex communication over a TCP connection. Implemented in all recents browsers (mobile included).
+                  Just TCP keep-alive (132 Bytes) sent over the network every 45s.</p>
+              </li>
+              <li>
+                <h2>HTTP/2</h2>
+                <p>Latest HTTP specification (2015) allowing server push and pipelining. Very effective but not well supported by browsers yet</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
         <section>
           <div class="wrap">
             <div class="content-center">
@@ -245,32 +285,35 @@
               <li>
                 <h2>Latency & Bandwidth efficiency</h2>
                   <ul>
-                    <li>WebSockets</li>
-                    <li>HTTP streaming </li>
-                    <li>HTTP long-poll </li>
-                    <li>HTTP polling   </li>
-                  </ul>
+                    <li style="color: green">WebSockets & HTTP/2</li>
+                    <li>HTTP streaming</li>
+                    <li>HTTP long-polling</li>
+                    <li style="color: orange">HTTP polling</li>
+                </ul>
               </li>
               <li>
                 <h2>Browser support</h2>
                 <ul>
-                  <li>WebSocket: iOS 4.2. Android browser 4.4. IE 10 and Edge. Firefox, Chrome and Opera since a long time</li>
-                  <li>HTTP polling & streaming: yes</li>
+                  <li style="color: orange">HTTP polling & streaming: all</li>
+                  <li style="color: green">WebSocket: iOS 4.2. Android 4.4. IE 10 and Edge. Firefox, Chrome and Opera since a long time</li>
+                  <li>HTTP/2: iOS 9.2, Android 4.4.4, not IE mobile, Safari partial, Chrome > 41</li>
                 </ul>
               </li>
               <li>
                 <h2>Implementing cost estimate</h2>
                 <ul>
-                  <li>HTTP polling</li>
-                  <li>WebSockets</li>
+                  <li style="color: orange">HTTP polling</li>
+                  <li style="color: green">WebSockets</li>
                   <li>HTTP long polling, streaming</li>
+                  <li>HTTP/2</li>
                 </ul>
               </li>
               <li>
                 <h2>Binary data support (typed arrays, blobs)</h2>
                 <ul>
-                  <li>WebSockets: yes</li>
-                  <li>HTTP polling, streaming: ajax binary is recent</li>
+                  <li style="color: green">WebSockets: yes</li>
+                  <li>HTTP/2: yes </li>
+                  <li><span style="color: orange">HTTP polling, </span>streaming: ajax binary is recent</li>
                 </ul>
               </li>
             </ul>
@@ -434,7 +477,35 @@
         <section>
           <div class="wrap size-50 aligncenter">
             <div class="bg-white shadow">
-              <img src="static/images/act.png">
+              <img src="static/images/act1.png">
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="wrap size-50 aligncenter">
+            <div class="bg-white shadow">
+              <img src="static/images/act2.png">
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="wrap size-50 aligncenter">
+            <div class="bg-white shadow">
+              <img src="static/images/act3.png">
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="wrap size-50 aligncenter">
+            <div class="bg-white shadow">
+              <img src="static/images/act4.png">
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="wrap size-50 aligncenter">
+            <div class="bg-white shadow">
+              <img src="static/images/act5.png">
             </div>
           </div>
         </section>
@@ -444,9 +515,40 @@
           <div class="wrap">
           <h1>Conclusion</h1>
             <ul>
-              <li>It is more than dev concern : business model & business cases count</li>
+              <li>It is more than dev concern : business model, business cases</li>
+            </ul>
+          </div>
+        </section>
+        <section class="bg-trans-dark">
+         <span class="background" style="background-image:url('static/images/lean4greenit-3.jpg')"></span>
+          <div class="wrap">
+          <h1>Conclusion</h1>
+            <ul>
+              <li>It is more than dev concern : business model, business cases</li>
+              <li>Eco-logic = Eco-nomic in software ?</li>
+            </ul>
+          </div>
+        </section>
+        <section class="bg-trans-dark">
+         <span class="background" style="background-image:url('static/images/lean4greenit-3.jpg')"></span>
+          <div class="wrap">
+          <h1>Conclusion</h1>
+            <ul>
+              <li>It is more than dev concern : business model, business cases</li>
               <li>Eco-logic = Eco-nomic in software ?</li>
               <li>Software craftmanship : are good practices enough ?</li>
+            </ul>
+          </div>
+        </section>
+        <section class="bg-trans-dark">
+         <span class="background" style="background-image:url('static/images/lean4greenit-3.jpg')"></span>
+          <div class="wrap">
+          <h1>Conclusion</h1>
+            <ul>
+              <li>It is more than dev concern : business model, business cases</li>
+              <li>Eco-logic = Eco-nomic in software ?</li>
+              <li>Software craftmanship : are good practices enough ?</li>
+              <li>Storytelling : being able to talk about the product and vision</li>
             </ul>
           </div>
         </section>
