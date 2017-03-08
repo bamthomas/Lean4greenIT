@@ -84,8 +84,8 @@
             <ol>
               <li>Project context</li>
               <li>Situation</li>
-              <li>Webmail integration</li>
-              <li>Website green efficiency</li>
+              <li>Problem: website green efficiency</li>
+              <li>Kaizen: webmail integration</li>
               <li>Results & Conclusion</li>
             </ol>
             </div>
@@ -177,6 +177,7 @@
 
         <section>
           <div class="wrap size-50 aligncenter">
+            <h1>2. Situation</h1>
             <div class="bg-white shadow">
               <img src="static/images/situation.png">
             </div>
@@ -191,155 +192,9 @@
         </section>
 
         <section>
-          <div class="wrap">
-            <div class="card-70">
-              <figure>
-                <img src="static/images/ascenseur_polling.gif">
-              </figure>
-              <blockquote>
-                <h1>Polling...</h1>
-                <p>"...is like sending elevator to each floor all the time to see if someone is there"</p>
-              </blockquote>
-          </div>
-          </div>
-        </section>
-
-        <section class="bg-trans-clear aligncenter">
-          <div class="wrap">
-            <div class="content-center">
-              <h2>Zoom 1: <span style="color: orange">Polling</span> alternatives</h2>
-              <p>HTTP protocol has not been built for server push</p>
-            </div>
-            <ul class="flexblock">
-              <li>
-                <h2>Long time polling</h2>
-                <p>HTTP protocol workaround for webpush. Works with all browsers. Regular request and response header overhead (~1KB).</p>
-              </li>
-              <li>
-                <h2>Comet</h2>
-                <p>Rather old, based on long time polling</p>
-              </li>
-              <li>
-                <h2>Http Streaming</h2>
-                <p>Similar to long polling but the server responds with a header "Transfer Encoding: chunked"
-                  and hence we do not need to initiate a new request every time the server sends some data</p>
-              </li>
-              <li>
-                <h2>Server-Sent Events</h2>
-                <p>Based on long time polling</p>
-              </li>
-              <li>
-                <h2>Networking plugins</h2>
-                <p>Users need to install a software component in their browsers</p>
-              </li>
-              <li>
-                <h2>Websocket</h2>
-                <p>Full-duplex communication over a TCP connection. Implemented in all recents browsers (mobile included).
-                  Just TCP keep-alive (132 Bytes) sent over the network every 45s.</p>
-              </li>
-              <li>
-                <h2>HTTP/2</h2>
-                <p>Latest HTTP specification (2015) allowing server push and pipelining. Very effective but not well supported by browsers yet</p>
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="bg-trans-clear aligncenter">
-          <div class="wrap">
-            <div class="content-center">
-              <h2>Zoom 1: <span style="color: orange">Polling</span> alternatives</h2>
-              <p>HTTP protocol has not been built for server push</p>
-            </div>
-            <ul class="flexblock">
-              <li>
-                <h2>Long time polling</h2>
-                <p>HTTP protocol workaround for webpush. Works with all browsers. Regular request and response header overhead (~1KB).</p>
-              </li>
-              <li style="background-color: lightcoral">
-                <h2>Comet</h2>
-                <p>Rather old, based on long time polling</p>
-              </li>
-              <li>
-                <h2>Http Streaming</h2>
-                <p>Similar to long polling but the server responds with a header "Transfer Encoding: chunked"
-                  and hence we do not need to initiate a new request every time the server sends some data</p>
-              </li>
-              <li style="background-color: lightcoral">
-                <h2>Server-Sent Events</h2>
-                <p>Based on long time polling</p>
-              </li>
-              <li style="background-color: lightcoral">
-                <h2>Networking plugins</h2>
-                <p>Users need to install a software component in their browsers</p>
-              </li>
-              <li>
-                <h2>Websocket</h2>
-                <p>Full-duplex communication over a TCP connection. Implemented in all recents browsers (mobile included).
-                  Just TCP keep-alive (132 Bytes) sent over the network every 45s.</p>
-              </li>
-              <li>
-                <h2>HTTP/2</h2>
-                <p>Latest HTTP specification (2015) allowing server push and pipelining. Very effective but not well supported by browsers yet</p>
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        <section>
-          <div class="wrap">
-            <div class="content-center">
-              <h2>Zoom 1: Polling alternatives</h2>
-              <p>
-                Main differences
-                (<a href="http://stackoverflow.com/questions/12555043/my-understanding-of-http-polling-long-polling-http-streaming-and-websockets">from this SO thread</a>
-                and <a href="http://caniuse.com/#search=websocket">caniuse.com</a>).
-                First is best.
-              </p>
-            </div>
-            <ul class="flexblock">
-              <li>
-                <h2>Latency & Bandwidth efficiency</h2>
-                  <ul>
-                    <li style="color: green">WebSockets & HTTP/2</li>
-                    <li>HTTP streaming</li>
-                    <li>HTTP long-polling</li>
-                    <li style="color: orange">HTTP polling</li>
-                </ul>
-              </li>
-              <li>
-                <h2>Browser support</h2>
-                <ul>
-                  <li style="color: orange">HTTP polling & streaming: all</li>
-                  <li style="color: green">WebSocket: iOS 4.2. Android 4.4. IE 10 and Edge. Firefox, Chrome and Opera since a long time</li>
-                  <li>HTTP/2: iOS 9.2, Android 4.4.4, not IE mobile, Safari partial, Chrome > 41</li>
-                </ul>
-              </li>
-              <li>
-                <h2>Implementing cost estimate</h2>
-                <ul>
-                  <li style="color: orange">HTTP polling</li>
-                  <li style="color: green">WebSockets</li>
-                  <li>HTTP long polling, streaming</li>
-                  <li>HTTP/2</li>
-                </ul>
-              </li>
-              <li>
-                <h2>Binary data support (typed arrays, blobs)</h2>
-                <ul>
-                  <li style="color: green">WebSockets: yes</li>
-                  <li>HTTP/2: yes </li>
-                  <li><span style="color: orange">HTTP polling, </span>streaming: ajax binary is recent</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        <section>
           <div class="wrap size-50 aligncenter">
             <div class="bg-white shadow">
-              <img src="static/images/goal.png">
+              <img src="static/images/goal1.png">
             </div>
           </div>
         </section>
@@ -377,7 +232,7 @@
                 </pre>
               </div>
               <div class="column">
-                <h2>Zoom 2: go and see footer</h2>
+                <h2>Problem: Website green efficiency (footer)</h2>
                 <p>The lawyers asked to remove the footer. This represents 558 Bytes and 8 DOM elements for each page</p>
                 <a href="static/images/dossiers_0.3.21.png"><img src="static/images/dossiers_0.3.21.png"></a>
               </div>
@@ -427,7 +282,7 @@
 </pre>
                   </div>
                 <div class="column">
-                  <h2>Zoom 2: go and see header</h2>
+                  <h2>Problem: Website green efficiency (header)</h2>
                     <ul class="flexblock specs">
                         <li>
                             <div>
@@ -450,6 +305,171 @@
                     </ul>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap size-50 aligncenter">
+            <h3>back to the situation (polling)</h3>
+            <div class="bg-white shadow">
+              <img src="static/images/situation.png">
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap size-50 aligncenter">
+            <div class="bg-white shadow">
+              <img src="static/images/goal2.png">
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <div class="card-70">
+              <figure>
+                <img src="static/images/ascenseur_polling.gif">
+              </figure>
+              <blockquote>
+                <h1>Polling...</h1>
+                <p>"...is like sending elevator to each floor all the time to see if someone is there"</p>
+              </blockquote>
+            </div>
+          </div>
+        </section>
+
+        <section class="bg-trans-clear aligncenter">
+          <div class="wrap">
+            <div class="content-center">
+              <h2>Kaizen: webmail integration</h2>
+              <p><span style="color: orange">Polling</span> alternatives</p>
+            </div>
+            <ul class="flexblock">
+              <li>
+                <h2>Long time polling</h2>
+                <p>HTTP protocol workaround for webpush. Works with all browsers. Regular request and response header overhead (~1KB).</p>
+              </li>
+              <li>
+                <h2>Comet</h2>
+                <p>Rather old, based on long time polling</p>
+              </li>
+              <li>
+                <h2>Http Streaming</h2>
+                <p>Similar to long polling but the server responds with a header "Transfer Encoding: chunked"
+                  and hence we do not need to initiate a new request every time the server sends some data</p>
+              </li>
+              <li>
+                <h2>Server-Sent Events</h2>
+                <p>Based on long time polling</p>
+              </li>
+              <li>
+                <h2>Networking plugins</h2>
+                <p>Users need to install a software component in their browsers</p>
+              </li>
+              <li>
+                <h2>Websocket</h2>
+                <p>Full-duplex communication over a TCP connection. Implemented in all recents browsers (mobile included).
+                  Just TCP keep-alive (132 Bytes) sent over the network every 45s.</p>
+              </li>
+              <li>
+                <h2>HTTP/2</h2>
+                <p>Latest HTTP specification (2015) allowing server push and pipelining. Very effective but not well supported by browsers yet</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="bg-trans-clear aligncenter">
+          <div class="wrap">
+            <div class="content-center">
+              <h2>Kaizen: webmail integration</h2>
+              <p><span style="color: orange">Polling</span> alternatives</p>
+              <p>HTTP protocol has not been built for server push</p>
+            </div>
+            <ul class="flexblock">
+              <li>
+                <h2>Long time polling</h2>
+                <p>HTTP protocol workaround for webpush. Works with all browsers. Regular request and response header overhead (~1KB).</p>
+              </li>
+              <li style="background-color: lightcoral">
+                <h2>Comet</h2>
+                <p>Rather old, based on long time polling</p>
+              </li>
+              <li>
+                <h2>Http Streaming</h2>
+                <p>Similar to long polling but the server responds with a header "Transfer Encoding: chunked"
+                  and hence we do not need to initiate a new request every time the server sends some data</p>
+              </li>
+              <li style="background-color: lightcoral">
+                <h2>Server-Sent Events</h2>
+                <p>Based on long time polling</p>
+              </li>
+              <li style="background-color: lightcoral">
+                <h2>Networking plugins</h2>
+                <p>Users need to install a software component in their browsers</p>
+              </li>
+              <li>
+                <h2>Websocket</h2>
+                <p>Full-duplex communication over a TCP connection. Implemented in all recents browsers (mobile included).
+                  Just TCP keep-alive (132 Bytes) sent over the network every 45s.</p>
+              </li>
+              <li>
+                <h2>HTTP/2</h2>
+                <p>Latest HTTP specification (2015) allowing server push and pipelining. Very effective but not well supported by browsers yet</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <div class="content-center">
+              <h2>Kaizen: webmail integration</h2>
+              <p><span style="color: orange">Polling</span> alternatives</p>
+              <p>
+                Main differences
+                (<a href="http://stackoverflow.com/questions/12555043/my-understanding-of-http-polling-long-polling-http-streaming-and-websockets">from this SO thread</a>
+                and <a href="http://caniuse.com/#search=websocket">caniuse.com</a>).
+                First is best.
+              </p>
+            </div>
+            <ul class="flexblock">
+              <li>
+                <h2>Latency & Bandwidth efficiency</h2>
+                  <ul>
+                    <li style="color: green">WebSockets & HTTP/2</li>
+                    <li>HTTP streaming</li>
+                    <li>HTTP long-polling</li>
+                    <li style="color: orange">HTTP polling</li>
+                </ul>
+              </li>
+              <li>
+                <h2>Browser support</h2>
+                <ul>
+                  <li style="color: orange">HTTP polling & streaming: all</li>
+                  <li style="color: green">WebSocket: iOS 4.2. Android 4.4. IE 10 and Edge. Firefox, Chrome and Opera since a long time</li>
+                  <li>HTTP/2: iOS 9.2, Android 4.4.4, not IE mobile, Safari partial, Chrome > 41</li>
+                </ul>
+              </li>
+              <li>
+                <h2>Implementing cost estimate</h2>
+                <ul>
+                  <li style="color: orange">HTTP polling</li>
+                  <li style="color: green">WebSockets</li>
+                  <li>HTTP long polling, streaming</li>
+                  <li>HTTP/2</li>
+                </ul>
+              </li>
+              <li>
+                <h2>Binary data support (typed arrays, blobs)</h2>
+                <ul>
+                  <li style="color: green">WebSockets: yes</li>
+                  <li>HTTP/2: yes </li>
+                  <li><span style="color: orange">HTTP polling, </span>streaming: ajax binary is recent</li>
+                </ul>
+              </li>
+            </ul>
           </div>
         </section>
 
@@ -557,7 +577,18 @@
             </ul>
           </div>
         </section>
-
+        <section class="bg-trans-dark">
+         <span class="background" style="background-image:url('static/images/lean4greenit-3.jpg')"></span>
+          <div class="wrap">
+          <h1>Conclusion</h1>
+            <ul>
+              <li>It is more than dev concern : business model, business cases</li>
+              <li>Storytelling : being able to talk about the product and vision</li>
+              <li>Eco-logic = Eco-nomic in software ? Software craftmanship</li>
+              <li>CSR - UX - Efficiency convergence. Lean is eco-logic : means saving, maximizing results</li>
+            </ul>
+          </div>
+        </section>
      <section>
         <div class="wrap">
           <div class="grid ms">
@@ -577,7 +608,8 @@
                   <li>You !</li>
                 </ul>
                 <footer>
-                  See <a href="https://classe.io"><img src="static/images/classe.svg"> classe.io</a>
+                  <a href="https://lean4greenit.barreverte.fr">https://lean4greenit.barreverte.fr</a><br>
+                  See our site<a href="https://classe.io"><img src="static/images/classe.svg"> classe.io</a>
                 </footer>
               </div>
           </div>
