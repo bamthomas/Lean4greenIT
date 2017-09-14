@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Le Lean pour le GreenIT</title>
+    <meta name="description" content="Comment nous avons utilisé le lean dès la conception pour réduire l'empreinte écologique de notre site de plus de 20%">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" type='text/css' media='all' href="static/css/base.css">
+    <link rel="stylesheet" type='text/css' media='all' href="static/css/colors.css">
+    <link rel="stylesheet" type='text/css' media='all' href="static/css/svg-icons.css">
+
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="classe.io">
+    <meta name="twitter:creator" content="@bam_thomas">
+    <meta name="twitter:title" content="Lean for GreenIT">
+    <meta name="twitter:description" content="Comment nous avons utilisé le lean dès la conception pour réduire l'empreinte écologique de notre site de plus de 20%">
+    <meta name="twitter:image" content="static/images/share-webslides.jpg">
+  </head>
+  <body>
+    <header role="banner">
+      <nav role="navigation">
+        <p class="logo"><a href="index.html" title="WebSlides">Le Lean pour le GreenIT</a></p>
+        <ul>
+          <li class="github">
+            <a rel="external" href="https://github.com/bamthomas/lean4greenit" title="Github">
+              <svg class="fa-github">
+                <use xlink:href="#fa-github"></use>
+              </svg>
+              <em>WebSlides</em>
+            </a>
+          </li>
+          <li class="twitter">
+            <a rel="external" href="https://twitter.com/bam_thomas" title="Twitter">
+              <svg class="fa-twitter">
+                <use xlink:href="#fa-twitter"></use>
+              </svg>
+              <em>@bam_thomas</em>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      <article id="webslides" class="horizontal">
+        <section class="bg-trans-dark aligncenter">
+         <span class="background light" style="background-image:url('static/images/lean4greenit-1.jpg')"></span>
+          <div class="wrap aligncenter">
+            <h1><strong>Le Lean pour le GreenIT</strong></h1>
+            <p class="text-intro">
+              Comment nous avons utilisé le lean pendant la conception<br>
+              pour réduire l'empreinte écologique de notre site web
+            </p>
+            <p>
+              Bruno Thomas - <a href="https://twitter.com/bam_thomas">@bam_thomas</a> -  <a href="https://classe.io">classe.io</a>
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <div class="card-50">
+              <blockquote>
+                <p>"Si vous aggrégez la consommation électrique des centres de données et des équipements réseau
+                  auxquels nous nous connectons, <strong>ce serait le 6e pays au monde en consommation d'énergie</strong>"</p>
+                <p><cite>Gary Cook</cite>
+                  Greenpeace's international IT analyst</p>
+              </blockquote>
+              <figure>
+                <img src="static/images/greenpeace.png">
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <span class="background light" style="background-image:url('static/images/lean4greenit-2.jpg')"></span>
+          <div class="wrap">
+            <div class="content-right">
+            <h1>Plan</h1>
+            <ol>
+              <li>Le contexte du projet</li>
+              <li>Situation</li>
+              <li>Problème: l'impact écologique du site</li>
+              <li>Kaizen: l'intégration du mail</li>
+              <li>Resultats & Conclusions</li>
+            </ol>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap size-50 aligncenter">
+            <h2><strong>Une rencontre</strong></h2>
+            <p class="text-intro">entre</p>
+            <div class="bg-white shadow">
+              <ul class="flexblock reasons">
+                <li>
+                  <h2>Deux avocats et un développeur</h2>
+                  <p>Le cabinet Ricard &amp; Ringuier ne trouvait pas un logiciel de gestion de dossier qui remplisse leurs besoins, me demandent si on peut en créer un...</p>
+                </li>
+                <li>
+                  <h2>Écoconception et Lean</h2>
+                  <p>...avec une démarche d'écoconception (Responsabilité Sociétale des Entreprises)</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap size-50 aligncenter">
+            <div class="bg-white shadow">
+              <img src="static/images/context.png">
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <span class="background-right-bottom" style="background-image:url('static/images/devorer_livre.gif')"></span>
+          <div class="wrap">
+            <h1>Que dit la littérature ?</h1>
+            Sur l'écoconception logicielle
+            <ul class="flexblock blink border">
+              <li>
+                <a href="https://abookapart.com/products/responsible-responsive-design">
+                  <div class="grid">
+                    <div class="column">
+                    <h3>Scott Jehl</h3>
+                    <img src="static/images/design_web.jpg" />
+                    </div>
+                    <div class="column">
+                    Un livre pour les dévelppeurs. Une grand part du livre est consacrée à la conception réactive <em>(responsive)</em>), mais aussi :
+                    <ul>
+                      <li>comment faire en sorte qu'un site web soit durable et fonctionne avec tous les types de matériels ?</li>
+                      <li>comment optimiser l'utilisation des resources d'exploitation du site ?</li>
+                    </ul>
+                    </div>
+                  </div>
+                </a>
+              </li><li>
+                <a href="https://ecoconceptionweb.com/">
+                  <div class="grid">
+                    <div class="column">
+                    <h3>Frédéric Bordage</h3>
+                    <img src="static/images/115_pratiques.jpg"/>
+                    </div>
+                      <div class="column">
+                        Ce sont 115 bonnes pratiques proposées par l'auteur pour optimiser un site web. Chacune a une indication
+                        d'impact fort/faible/moyen qui permet de faire une grille d'évaluation de la qualité écologique du site
+                        en comptabilisant les pratiques implémentées.
+                      </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <div class="grid">
+              <div class="column">
+                <h1>La résolution de problème</h1>
+                <p>Quel problème adresser en premier ?</p>
+                <p>Quel va être le bénéfice pour l'utilisateur ?</p>
+                <p>Comment mesurer l'amélioration de l'empreinte carbone ?</p>
+              </div>
+              <div class="column">
+                <img src="static/images/peche_amelioration.gif" width="500" height="400"/>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap size-50 aligncenter">
+            <h1>2. Situation</h1>
+            <div class="bg-white shadow">
+              <img src="static/images/situation.png">
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <h1>Ecoindex model</h1>
+            <img src="static/images/ecoindex.png"/>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap size-50 aligncenter">
+            <div class="bg-white shadow">
+              <img src="static/images/goal1.png">
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <div class="card-50">
+              <figure>
+                <img src="static/images/travolta.gif">
+              </figure>
+            <div>
+            <h1>Allons sur le terrain</h1>
+            <p>Comment le site est-il construit ?</p>
+            </div>
+          </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <div class="grid ms">
+              <div class="column">
+                <pre>
+&lt;div class="ui inverted vertical footer segment"&gt;
+    &lt;div class="ui center aligned container"&gt;
+        &lt;img src="images/logo.png" class="ui centered mini image"&gt;
+        &lt;div class="ui horizontal inverted small divided list"&gt;
+            &lt;a class="item" href="#"&gt;Mentions légales et C.G.U.&lt;/a&gt;
+            &lt;a class="item" href="#"&gt;Respect de votre vie privée&lt;/a&gt;
+            &lt;a class="item" href="#"&gt;Contactez-nous&lt;/a&gt;
+            &lt;div class="item"&gt;version: {{ version }}&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                </pre>
+              </div>
+              <div class="column">
+                <h2>Problème: impact écologique du site (pied de page)</h2>
+                <p>Les avocats demandent de supprimer le pied de page. Cela représente 558 Bytes et 8 éléments DOM pour chaque page</p>
+                <a href="static/images/dossiers_0.3.21.png"><img src="static/images/dossiers_0.3.21.png"></a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <div class="grid ms">
+              <div class="column">
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;
+  &lt;meta http-equiv="content-type" content="text/html; charset=UTF-8"&gt;
+    ....
+  &lt;title&gt;Projet S&lt;/title&gt;
+  &lt;link rel="stylesheet" href="/static/css/semantic.css"/&gt;
+  &lt;link rel="stylesheet" href="/static/css/mytheme.css"/&gt;
+
+  &lt;script src="/static/js/jquery.min.js"/&gt;
+  &lt;script src="/static/js/jquery.form-3.51.js"/&gt;
+  &lt;script src="/static/js/underscore.min.js"/&gt;
+  &lt;script src="/static/js/backbone.min.js"/&gt;
+  &lt;script src="/static/js/semantic.min.js"/&gt;
+
+  &lt;script&gt;
+    $(document).ready(function() {
+      $('.masthead').visibility({
+        once: false,
+        onBottomPassed: function() {
+            $('.fixed.menu').transition('fade in');
+        },
+        onBottomPassedReverse: function() {
+            $('.fixed.menu').transition('fade out');
+        }
+      });
+      $('.ui.sidebar').sidebar('attach events', '.toc.item');
+    });
+  &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class="ui main container&gt;
+    {% block body %}{% endblock %}
+&lt;/div&gt;
+&lt;/body&gt;
+</pre>
+                  </div>
+                <div class="column">
+                  <h2>Problème: impact écologique du site (entête)</h2>
+                    <ul class="flexblock specs">
+                        <li>
+                            <div>
+                                <svg class="fa-css3"><use xlink:href="#fa-css3"></use></svg>
+                                2 feuilles de styles CSS non minifiées
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <svg class="fa-file-code-o"><use xlink:href="#fa-file-code-o"></use></svg>
+                                5 librairies javascript. Chacune représente une requête
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                            <svg class="fa-code"><use xlink:href="#fa-code"></use></svg>
+                            Du javascript en ligne chargé à chaque page (pas caché, pas minifié)
+                            </div>
+                        </li>
+                    </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap size-50 aligncenter">
+            <h3>Retour à la situation (polling)</h3>
+            <div class="bg-white shadow">
+              <img src="static/images/situation.png">
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap size-50 aligncenter">
+            <div class="bg-white shadow">
+              <img src="static/images/goal2.png">
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <div class="card-70">
+              <figure>
+                <img src="static/images/ascenseur_polling.gif">
+              </figure>
+              <blockquote>
+                <h1>Le polling...</h1>
+                <p>"...c'est envoyer un ascenseur sans arrêt à chaque étage pour voir si quelqu'un veut monter ou descendre"</p>
+              </blockquote>
+            </div>
+          </div>
+        </section>
+
+        <section class="bg-trans-clear aligncenter">
+          <div class="wrap">
+            <div class="content-center">
+              <h2>Kaizen: l'intégration du mail</h2>
+              <p>les alternatives au <span style="color: orange">Polling</span></p>
+              <p>Le protocol HTTP n'a pas été conçu pour que le serveur prenne l'initiative</p>
+            </div>
+            <ul class="flexblock">
+              <li>
+                <h2>Long time polling</h2>
+                <p>Contournement du protocol HTTP pour faire de l'événementiel. Fonctionne avec tous les navigateurs. Surcoût des entêtes HTTP envoyés à chaque requête (~1KB).</p>
+              </li>
+              <li>
+                <h2>Comet</h2>
+                <p>Vieux protocol basé sur le <em>long time polling</em></p>
+              </li>
+              <li>
+                <h2>Streaming HTTP</h2>
+                <p>Similaire au <em>long time polling</em> mais le serveur répond avec un entête "Transfer Encoding: chunked"
+                  ce qui permet de ne pas refaire une nouvelle requête à chaque fois que le serveur envoie une donnée</p>
+              </li>
+              <li>
+                <h2>Server-Sent Events</h2>
+                <p>Basé sur le <em>long time polling</em></p>
+              </li>
+              <li>
+                <h2>Plugins réseau</h2>
+                <p>Les utilisateurs doivent installer un composant dans leur navigateur</p>
+              </li>
+              <li>
+                <h2>Websocket</h2>
+                <p>Communication bidirectionnelle avec une connexion TCP. Implémenté dans tous les navigateurs récents (mobile inclus).
+                  Juste une ligne de vie TCP : 132 octets envoyés sur le réseau toutes les 45s.</p>
+              </li>
+              <li>
+                <h2>HTTP/2</h2>
+                <p>Dernière spécification HTTP (2015) qui permet aux serveurs web de faire du push/pipelining. Très efficace mais pas encore très répandu.</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="bg-trans-clear aligncenter">
+          <div class="wrap">
+            <div class="content-center">
+              <h2>Kaizen: l'intégration du mail</h2>
+              <p>les alternatives au <span style="color: orange">Polling</span></p>
+              <p>Le protocol HTTP n'a pas été conçu pour que le serveur prenne l'initiative</p>
+            </div>
+            <ul class="flexblock">
+              <li>
+                <h2>Long time polling</h2>
+                <p>Contournement du protocol HTTP pour faire de l'événementiel. Fonctionne avec tous les navigateurs. Surcoût des entêtes HTTP envoyés à chaque requête (~1KB).</p>
+              </li>
+              <li style="background-color: lightcoral">
+                <h2>Comet</h2>
+                <p>Vieux protocol basé sur le <em>long time polling</em></p>
+              </li>
+              <li>
+                <h2>Streaming Http</h2>
+                <p>Similaire au <em>long time polling</em> mais le serveur répond avec un entête "Transfer Encoding: chunked"
+                  ce qui permet de ne pas refaire une nouvelle requête à chaque fois que le serveur envoie une donnée</p>
+              </li>
+              <li style="background-color: lightcoral">
+                <h2>Server-Sent Events</h2>
+                <p>Basé sur le <em>long time polling</em></p>
+              </li>
+              <li style="background-color: lightcoral">
+                <h2>Plugins réseau</h2>
+                <p>Les utilisateurs doivent installer un composant dans leur navigateur</p>
+              </li>
+              <li>
+                <h2>Websocket</h2>
+                <p>Communication bidirectionnelle avec une connexion TCP. Implémenté dans tous les navigateurs récents (mobile inclus).
+                  Juste une ligne de vie TCP : 132 octets envoyés sur le réseau toutes les 45s.</p>
+              </li>
+              <li>
+                <h2>HTTP/2</h2>
+                <p>Dernière spécification HTTP (2015) qui permet aux serveurs web de faire du push/pipelining. Très efficace mais pas encore très répandu.</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <div class="content-center">
+              <h2>Kaizen: l'intégration du mail</h2>
+              <p>les alternatives au <span style="color: orange">Polling</span></p>
+              <p>
+                Principales différences
+                (<a href="http://stackoverflow.com/questions/12555043/my-understanding-of-http-polling-long-polling-http-streaming-and-websockets">à partir de ce fil SO</a>
+                et le site <a href="http://caniuse.com/#search=websocket">caniuse.com</a>).
+                Le premier est meilleur.
+              </p>
+            </div>
+            <ul class="flexblock">
+              <li>
+                <h2>Latence & Bande passante</h2>
+                  <ul>
+                    <li style="color: green">WebSockets & HTTP/2</li>
+                    <li>HTTP streaming</li>
+                    <li>HTTP long-polling</li>
+                    <li style="color: orange">HTTP polling</li>
+                </ul>
+              </li>
+              <li>
+                <h2>Compatibilité navigateurs</h2>
+                <ul>
+                  <li style="color: orange">HTTP polling & streaming: tous</li>
+                  <li style="color: green">WebSocket: iOS 4.2. Android 4.4. IE 10 and Edge. Firefox, Chrome et Opera depuis longtemps</li>
+                  <li>HTTP/2: iOS 9.2, Android 4.4.4, pas IE mobile, Safari partiel, Chrome > 41</li>
+                </ul>
+              </li>
+              <li>
+                <h2>Estimation du coût d'implémentation</h2>
+                <ul>
+                  <li style="color: orange">HTTP polling</li>
+                  <li style="color: green">WebSockets</li>
+                  <li>HTTP long polling, streaming</li>
+                  <li>HTTP/2</li>
+                </ul>
+              </li>
+              <li>
+                <h2>Supporte les données binaires (blobs, typed arrays)</h2>
+                <ul>
+                  <li style="color: green">WebSockets: oui</li>
+                  <li>HTTP/2: oui </li>
+                  <li><span style="color: orange">HTTP polling, </span>streaming: ajax binaire est récent</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap size-50 aligncenter">
+            <div class="bg-white shadow">
+              <img src="static/images/cause_analysis.png">
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap size-50 aligncenter">
+            <div class="bg-white shadow">
+              <img src="static/images/corrective_actions.png">
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <div class="card-50">
+              <div>
+              <h1>Vérifions</h1>
+              <p>Combien nous avons été bons !</p>
+            </div>
+              <figure>
+                <img src="static/images/results_bim.gif">
+              </figure>
+          </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap size-50 aligncenter">
+            <div class="bg-white shadow">
+              <img src="static/images/check_results.png">
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap size-50 aligncenter">
+            <div class="bg-white shadow">
+              <img src="static/images/act1.png">
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="wrap size-50 aligncenter">
+            <div class="bg-white shadow">
+              <img src="static/images/act2.png">
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="wrap size-50 aligncenter">
+            <div class="bg-white shadow">
+              <img src="static/images/act3.png">
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="wrap size-50 aligncenter">
+            <div class="bg-white shadow">
+              <img src="static/images/act4.png">
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="wrap size-50 aligncenter">
+            <div class="bg-white shadow">
+              <img src="static/images/act5.png">
+            </div>
+          </div>
+        </section>
+
+        <section class="bg-trans-dark">
+         <span class="background" style="background-image:url('static/images/lean4greenit-3.jpg')"></span>
+          <div class="wrap">
+          <h1>Conclusion</h1>
+            <ul>
+              <li>C'est une préoccupation qui dépasse le logiciel : le modèle économique, les cas d'utilisation</li>
+            </ul>
+          </div>
+        </section>
+        <section class="bg-trans-dark">
+         <span class="background" style="background-image:url('static/images/lean4greenit-3.jpg')"></span>
+          <div class="wrap">
+          <h1>Conclusion</h1>
+            <ul>
+              <li>C'est une préoccupation qui dépasse le logiciel : le modèle économique, les cas d'utilisation</li>
+              <li>Eco-logique = Eco-nomique en logiciel ? le bon développeur <em>(Software craftmanship)</em></li>
+            </ul>
+          </div>
+        </section>
+        <section class="bg-trans-dark">
+         <span class="background" style="background-image:url('static/images/lean4greenit-3.jpg')"></span>
+          <div class="wrap">
+          <h1>Conclusion</h1>
+            <ul>
+              <li>C'est une préoccupation qui dépasse le logiciel : le modèle économique, les cas d'utilisation</li>
+              <li>Eco-logique = Eco-nomique en logiciel ? le bon développeur <em>(Software craftmanship)</em></li>
+              <li>Raconter une histoire : être capable de parler de la vision produit</li>
+            </ul>
+          </div>
+        </section>
+        <section class="bg-trans-dark">
+         <span class="background" style="background-image:url('static/images/lean4greenit-3.jpg')"></span>
+          <div class="wrap">
+          <h1>Conclusion</h1>
+            <ul>
+              <li>C'est une préoccupation qui dépasse le logiciel : le modèle économique, les cas d'utilisation</li>
+              <li>Eco-logique = Eco-nomique en logiciel ? le bon développeur <em>(Software craftmanship)</em></li>
+              <li>Raconter une histoire : être capable de parler de la vision produit</li>
+              <li>Convergence entre écoconception et expérience utilisateur (UX)</li>
+            </ul>
+          </div>
+        </section>
+        <section class="bg-trans-dark">
+         <span class="background" style="background-image:url('static/images/lean4greenit-3.jpg')"></span>
+          <div class="wrap">
+          <h1>Conclusion</h1>
+            <ul>
+              <li>C'est une préoccupation qui dépasse le logiciel : le modèle économique, les cas d'utilisation</li>
+              <li>Eco-logique = Eco-nomique en logiciel ? le bon développeur <em>(Software craftmanship)</em></li>
+              <li>Raconter une histoire : être capable de parler de la vision produit</li>
+              <li>Convergence entre écoconception et expérience utilisateur (UX)</li>
+              <li>Lean
+                <ul>
+                  <li>est éco-nomique : maximisation des résultats avec des moyens limités (congruence).</li>
+                  <li>permet de dépasser les frontières (de rôles, de préjugés)</li>
+                </ul>
+              </li>
+              </ul>
+          </div>
+        </section>
+     <section>
+        <div class="wrap">
+          <div class="grid ms">
+            <div class="column">
+              <div class="bg-white shadow">
+                <a href="static/images/a3.png"><img src="static/images/a3.png"></a>
+              </div>
+            </div>
+              <div class="column">
+                <h1>Merci !</h1>
+                <ul>
+                  <li>Régis Médina</li>
+                  <li>Antoine Ricard</li>
+                  <li>Bruno Ringuier</li>
+                  <li>Florence Préault</li>
+                  <li>Philippe Blayo</li>
+                  <li>Vous !</li>
+                </ul>
+                <footer>
+                  <a href="https://lean4greenit.barreverte.fr">https://lean4greenit.barreverte.fr</a><br>
+                  Notre site <a href="https://classe.io"><img src="static/images/classe.svg"> classe.io</a>
+                </footer>
+              </div>
+          </div>
+        </div>
+
+      </section>
+
+    <section>
+      <div class="wrap">
+        <h1>Références</h1>
+        <ul>
+          <li>Ecoindex : <a href="http://ecoindex.fr">http://ecoindex.fr</a> </li>
+          <li>Un autre outil de mesure environnemental : <a href="http://webenergyarchive.com">http://webenergyarchive.com/</a></li>
+          <li>Un article du CNRS <a href="http://www.cnrs.fr/ins2i/spip.php?article2365">à propos de l'efficacité des langages compilés/interprétés</a></li>
+          <li>Le storytelling produit : "<a href="https://www.i-scoop.eu/using-storytelling-strengthen-brand/">Using story telling strengthen brand</a>" et "<a href="https://marketingcraftsmanship.com/tag/storytelling/">Jimmy Webb and the Power of Storytelling for B2B Companies</a>"
+          </li>
+        </ul>
+      </div>
+    </section>
+
+     <footer role="contentinfo">
+      <div class="wrap">
+        <p>An <a href="https://github.com/jlantunez/webslides">open source solution</a>, by <a href="https://twitter.com/jlantunez">@jlantunez</a>.</p>
+      </div>
+    </footer>
+
+    <script src="static/js/svg-icons.js"></script>
+    <script src="static/js/webslides.js"></script>
+    <script>
+      window.ws = new WebSlides();
+    </script>
+
+    <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
+    <script defer src="static/js/svg-icons.js"></script>
+
+  </body>
+</html>
